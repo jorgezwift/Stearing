@@ -103,7 +103,7 @@ public class SterzoService extends Service implements ServerObserver, Connection
         registerReceiver(bluetoothStateBroadcastReceiver, new IntentFilter(BluetoothAdapter.ACTION_STATE_CHANGED));
 
         bleAdvertiseCallback = new BleAdvertiserCallback();
-
+ 
         final BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter.isEnabled()) {
             onBluetoothEnabled();
