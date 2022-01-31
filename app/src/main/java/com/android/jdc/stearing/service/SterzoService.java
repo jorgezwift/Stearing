@@ -138,7 +138,6 @@ public class SterzoService extends Service implements ServerObserver, Connection
 
     @Override
     public void onServerReady() {
-        Log.i(TAG, "SERVER READY");
         BluetoothManager bluetoothManager = (BluetoothManager) getSystemService(Context.BLUETOOTH_SERVICE);
         bluetoothManager.getAdapter().getBluetoothLeAdvertiser().startAdvertising(
                 BleAdvertiser.settings(),
